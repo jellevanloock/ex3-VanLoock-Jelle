@@ -18,5 +18,8 @@ app.get("/", function(request, response){
     response.sendfile(__dirname + '/calculator.html');
 });
 
+app.post("/", function(request, response){
+    console.log(request.body.display);
+})
 app.listen(4567);
 console.log("Start server...")
