@@ -20,6 +20,8 @@ app.get("/", function(request, response){
 
 app.post("/", function(request, response){
     console.log(request.body.display);
+    var uitrekenen = eval(request.body.display);
+    console.log(uitrekenen);
 })
 app.listen(4567);
 console.log("Start server...")
