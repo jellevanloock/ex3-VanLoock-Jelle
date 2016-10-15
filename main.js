@@ -14,6 +14,7 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 
+//app.use(express.static(__dirname, "ex3-VanLoock-Jelle"));
 app.get("/", function(request, response){
     response.sendfile(__dirname + '/calculator.html');
 });

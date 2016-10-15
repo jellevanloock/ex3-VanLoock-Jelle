@@ -1,0 +1,34 @@
+#H{
+	font-family: helvetica;
+	margin: 0 0 0 20px;
+}
+
+#div{
+	margin: 0 0 0 20px;
+	font-family: helvetica;
+}
+
+#display{
+	width: 145px;
+	height: 30px;
+	text-align: right;
+}
+
+.button{
+	width: 30px;
+	height: 30px;
+	margin: 2px;
+}
+
+.button:hover{
+	background-color: #FFFF0F;
+}
+
+#Ctoets{
+	width: 148px;
+	height: 30px;
+}
+
+#Ctoets:hover{
+	background-color: #FFFF0F;
+}
