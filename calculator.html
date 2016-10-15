@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2 id="H">Dit is mijn calculator</h2>
+<br>
+<div id="div">
+	<form name="calculator">
+	<input type="text" id="display" placeholder="0">
+	<br>
+	<input class="button" type="button" value="7" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="8" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="9" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="/" onclick="krijgwaarde(this.value)">
+	<br>
+	<input class="button" type="button" value="4" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="5" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="6" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="*" onclick="krijgwaarde(this.value)">
+	<br>
+	<input class="button" type="button" value="1" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="2" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="3" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="+" onclick="krijgwaarde(this.value)">
+	<br>
+	<input class="button" type="button" value="=" onclick="uitrekenen()">
+	<input class="button" type="button" value="0" onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="." onclick="krijgwaarde(this.value)">
+	<input class="button" type="button" value="-" onclick="krijgwaarde(this.value)">
+	<br>
+	<input id="Ctoets" type="button" value="c" onclick="wegdoen()">
+	</form>
+</div>
+<script>
+    var string = "";
+    function krijgwaarde(getal) {
+        string += getal;
+        document.getElementById("display").value = string;
+    }
+    function uitrekenen(){
+    	string = eval(string);
+    	document.getElementById("display").value = string;
+    }
+    function wegdoen(){
+    	string = "";
+    	document.getElementById("display").value = string;
+    }
+
+</script>
+</body>
+</html>
