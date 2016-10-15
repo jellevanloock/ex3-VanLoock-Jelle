@@ -22,6 +22,7 @@ app.post("/", function(request, response){
     console.log(request.body.display);
     var uitrekenen = eval(request.body.display);
     console.log(uitrekenen);
+    response.send('<h2>'+uitrekenen+'</h2>');
 })
 app.listen(4567);
 console.log("Start server...")
