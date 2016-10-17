@@ -24,7 +24,7 @@ app.get("/", function(request, response){
 
 //bijhouden welke berekingen er al uitgevoerd zijn
 app.get("/uitkomst", function(request, response){
-  //stuurt als antwoord de inhoud van onze database. Standaard in json terug gestuurd.
+  //Standaard in json terug gestuurd.
   response.send(uitkomst);
 });
 
@@ -32,9 +32,10 @@ app.post("/", function(request, response){
     //console.log(request.body.display);
     var berekening = request.body.display;
     var uitrekenen = eval(request.body.display);
-    uitkomst.push({"berekening": berekening, "uitkomst": uitrekenen})
+    uitkomst.push({"berekening": berekening, "uitkomst": uitrekenen});
     console.log(uitrekenen);
-    response.send('<h2>'+uitrekenen+'</h2>');
+    //response.send('<h2>'+uitrekenen+'</h2>');
+    response.status(203).send(uitkomst);
 })
 app.listen(4567);
-console.log("Start server...")
+console.log("Start server...");
